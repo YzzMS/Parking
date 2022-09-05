@@ -342,17 +342,17 @@ classdef Car <handle
                 Y = Z(car.canobserve(i)).grid2;
                 a = getCosts(costmap,[X(:),Y(:)]);
                 if a(1) == 1
-                    if rand > 0.9
-                        car.observation(car.canobserve(i)) = 0;%观测结果为空
-                    else
+                    %if rand > 0.9
+                     %   car.observation(car.canobserve(i)) = 0;%观测结果为空
+                    %else
                         car.observation(car.canobserve(i)) = 1;%观测结果为满
-                    end
+                    %end
                 else
-                    if rand > 0.7
-                       car.observation(car.canobserve(i)) = 1;
-                    else
+                    %if rand > 0.7
+                     %  car.observation(car.canobserve(i)) = 1;
+                    %else
                         car.observation(car.canobserve(i)) = 0;
-                    end
+                    %end
                 end
             end
         end
